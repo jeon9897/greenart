@@ -1,0 +1,699 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>그린컴퓨터아트학원(종로) - 수료생 포트폴리오 갤러리</title>
+  <meta name="description"
+    content="그린컴퓨터아트학원 학생들의 열정과 성장이 담긴 프로젝트 결과물을 확인하세요. 웹개발, 프론트엔드, 백엔드 등 다양한 과정의 작품을 한눈에 볼 수 있습니다.">
+  <!-- 파비콘 -->
+  <link rel="icon" href="./assets/green_favicon_renew.ico">
+  <!-- Google Fonts -->
+  <link rel="stylesheet" as="style" crossorigin
+    href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/static/pretendard.min.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@400;700;900&display=swap" rel="stylesheet">
+  <!-- Custom CSS -->
+  <link rel="stylesheet" type="text/css" href="./css/style.css">
+  <!-- Icons (FontAwesome) -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+
+<body>
+  <!-- Skip Navigation -->
+  <a href="#main-content" class="skip-nav">본문 바로가기</a>
+
+  <header id="header" role="banner">
+    <div class="container">
+      <a href="index.html" class="logo" title="메인 페이지로 이동">
+        <img src="./assets/header_logo.svg" alt="Green Art Computer 홈">
+      </a>
+
+      <nav class="nav-links" aria-label="메인 내비게이션">
+        <a href="#home">Home</a>
+        <a href="#works">Portfolio</a>
+        <a href="#about">About</a>
+        <a href="#contact">Contact Us</a>
+      </nav>
+
+      <button class="mobile-toggle" aria-label="메뉴 열기" aria-expanded="false" aria-controls="mobile-nav">
+        <i class="fa-solid fa-bars" aria-hidden="true"></i>
+      </button>
+    </div>
+  </header>
+
+  <main id="main-content">
+    <!-- Hero Section -->
+    <section id="home" class="hero" aria-label="메인 배너">
+      <video autoplay muted loop playsinline class="hero-video" aria-hidden="true" role="presentation">
+        <source src="./assets/hero_mv_1920_1080_25fps.mp4" type="video/mp4">
+      </video>
+      <div class="container hero-content">
+        <h1>학생들의 성장을<br><span style="color: var(--primary-color);">작품</span>으로 확인하세요</h1>
+        <p>그린컴퓨터아트학원은 실천하는 인재를 양성합니다. 400~700시간 이상의 고민과 노력이 담긴 학생들의 다채로운 프로젝트를 지금 만나보세요.</p>
+        <a href="#works" class="cta-btn" role="button">작품 보러가기</a>
+      </div>
+      <div class="scroll-down">
+        <a href="#works" aria-label="포트폴리오 영역으로 이동">
+          <span class="scroll-text">SCROLL</span>
+          <i class="fa-solid fa-chevron-down"></i>
+        </a>
+      </div>
+    </section>
+
+    <!-- Works Section -->
+    <section id="works" class="works">
+      <div class="container">
+        <div class="section-title">
+          <h2>Portfolio</h2>
+          <p>실무 역량을 키워가는 학생들의 프로젝트 갤러리</p>
+        </div>
+
+        <div class="filter-group" role="toolbar" aria-label="카테고리 필터">
+          <button class="filter-btn active" data-filter="all" aria-pressed="true">전체보기</button>
+          <button class="filter-btn" data-filter="frontend" aria-pressed="false">프론트엔드</button>
+          <button class="filter-btn" data-filter="web" aria-pressed="false">웹퍼블리싱</button>
+          <button class="filter-btn" data-filter="uxui" aria-pressed="false">UX/UI DESIGN</button>
+          <button class="filter-btn" data-filter="publishing" aria-pressed="false">편집디자인(시각&출판편집)</button>
+        </div>
+
+        <div class="works-grid" role="list" aria-live="polite">
+
+          <!-- Project Card 1: Frontend -->
+          <article class="work-card" data-category="frontend" role="listitem">
+            <div class="card-img">
+              <img src="assets/frontend/hyeryeon.png" alt="김혜련 학생 포트폴리오 미리보기">
+            </div>
+            <div class="card-content">
+              <span class="card-category">프론트엔드</span>
+              <h3 class="card-title">2025' KDT프론트엔드 개발자 양성</h3>
+              <p class="card-author"> - <b>김혜련</b> 학생</p>
+              <p class="card-desc">React를 활용하여 만든 사이트로서 개인 작품을 소개하기 위한 홈페이지입니다.</p>
+              <a href="https://hrkim0413.dothome.co.kr/" class="card-btn" aria-label="김혜련 학생 포트폴리오 상세보기"
+                target="_blank">상세보기 <i class="fa-solid fa-arrow-right" aria-hidden="true"></i></a>
+            </div>
+          </article>
+
+          <!-- Project Card 2: Frontend -->
+          <article class="work-card" data-category="frontend" role="listitem">
+            <div class="card-img">
+              <img src="assets/frontend/hoon.png" alt="곽훈 학생 포트폴리오 미리보기">
+            </div>
+            <div class="card-content">
+              <span class="card-category">프론트엔드</span>
+              <h3 class="card-title">2025' KDT프론트엔드 개발자 양성</h3>
+              <p class="card-author"> - <b>곽훈</b> 학생</p>
+              <p class="card-desc">React를 활용하여 만든 사이트로서 개인 작품을 소개하기 위한 홈페이지입니다.</p>
+              <a href="https://www.sugarcity.site/" class="card-btn" aria-label="곽훈 학생 포트폴리오 상세보기" target="_blank">상세보기
+                <i class="fa-solid fa-arrow-right" aria-hidden="true"></i></a>
+            </div>
+          </article>
+
+          <!-- Project Card 3: Frontend -->
+          <article class="work-card" data-category="frontend" role="listitem">
+            <div class="card-img">
+              <img src="assets/frontend/hayoung.png" alt="정하영 학생 포트폴리오 미리보기">
+            </div>
+            <div class="card-content">
+              <span class="card-category">프론트엔드</span>
+              <h3 class="card-title">2025' KDT프론트엔드 개발자 양성</h3>
+              <p class="card-author"> - <b>정하영</b> 학생</p>
+              <p class="card-desc">개인 작품을 소개하기 위한 홈페이지입니다.</p>
+              <a href="https://cozydudeboy.github.io/portfolio/" class="card-btn" aria-label="정하영 학생 포트폴리오 상세보기"
+                target="_blank">상세보기 <i class="fa-solid fa-arrow-right" aria-hidden="true"></i></a>
+            </div>
+          </article>
+
+          <!-- Project Card 4: Frontend -->
+          <article class="work-card" data-category="frontend" role="listitem">
+            <div class="card-img">
+              <img src="assets/frontend/sunwoorin.png" alt="선우린 학생 포트폴리오 미리보기">
+            </div>
+            <div class="card-content">
+              <span class="card-category">프론트엔드</span>
+              <h3 class="card-title">2025' KDT프론트엔드 개발자 양성</h3>
+              <p class="card-author"> - <b>선우린</b> 학생</p>
+              <p class="card-desc">React를 활용하여 만든 사이트로서 개인 작품을 소개하기 위한 홈페이지입니다.</p>
+              <a href="https://lynsunwoo.github.io/portfolio/" class="card-btn" aria-label="선우린 학생 포트폴리오 상세보기"
+                target="_blank">상세보기 <i class="fa-solid fa-arrow-right" aria-hidden="true"></i></a>
+            </div>
+          </article>
+
+          <!-- Project Card 5: Frontend -->
+          <article class="work-card" data-category="frontend" role="listitem">
+            <div class="card-img">
+              <img src="assets/frontend/jihee.png" alt="임지희 학생 포트폴리오 미리보기">
+            </div>
+            <div class="card-content">
+              <span class="card-category">프론트엔드</span>
+              <h3 class="card-title">2025' KDT프론트엔드 개발자 양성</h3>
+              <p class="card-author"> - <b>임지희</b> 학생</p>
+              <p class="card-desc">개인 작품을 소개하기 위한 홈페이지입니다.</p>
+              <a href="https://ijh950809-dotcom.github.io/2026-portfolio_frontend/" class="card-btn"
+                aria-label="임지희 학생 포트폴리오 상세보기" target="_blank">상세보기 <i class="fa-solid fa-arrow-right"
+                  aria-hidden="true"></i></a>
+            </div>
+          </article>
+
+          <!-- Project Card 6: Frontend -->
+          <article class="work-card" data-category="frontend" role="listitem">
+            <div class="card-img">
+              <img src="assets/frontend/sunkyung.png" alt="김선경 학생 포트폴리오 미리보기">
+            </div>
+            <div class="card-content">
+              <span class="card-category">프론트엔드</span>
+              <h3 class="card-title">2024' KDT프론트엔드 개발자 양성</h3>
+              <p class="card-author">- <b>김선경</b> 학생</p>
+              <p class="card-desc">개인 작품을 소개하기 위한 홈페이지입니다.</p>
+              <a href="https://sandymandy-0817.github.io/portfolio/" class="card-btn" aria-label="김선경 학생 포트폴리오 상세보기"
+                target="_blank">상세보기 <i class="fa-solid fa-arrow-right" aria-hidden="true"></i></a>
+            </div>
+          </article>
+
+          <!-- Project Card 7: Frontend -->
+          <article class="work-card" data-category="frontend" role="listitem">
+            <div class="card-img">
+              <img src="assets/frontend/hwabin.png" alt="최화빈 학생 포트폴리오 미리보기">
+            </div>
+            <div class="card-content">
+              <span class="card-category">프론트엔드</span>
+              <h3 class="card-title">2024' KDT프론트엔드 개발자 양성</h3>
+              <p class="card-author">- <b>최화빈</b> 학생</p>
+              <p class="card-desc">React를 활용하여 만든 사이트로서 개인 작품을 소개하기 위한 홈페이지입니다.</p>
+              <a href="https://choihwabin.github.io/portfolio/" class="card-btn" aria-label="최화빈 학생 포트폴리오 상세보기"
+                target="_blank">상세보기 <i class="fa-solid fa-arrow-right" aria-hidden="true"></i></a>
+            </div>
+          </article>
+
+          <!-- Project Card 8: Frontend -->
+          <article class="work-card" data-category="frontend" role="listitem">
+            <div class="card-img">
+              <img src="assets/frontend/younghun.png" alt="노영훈 학생 포트폴리오 미리보기">
+            </div>
+            <div class="card-content">
+              <span class="card-category">프론트엔드</span>
+              <h3 class="card-title">2024' KDT프론트엔드 개발자 양성</h3>
+              <p class="card-author">- <b>노영훈</b> 학생</p>
+              <p class="card-desc">개인 작품을 소개하기 위한 홈페이지입니다.</p>
+              <a href="https://nohyounghun.github.io/portfolio/" class="card-btn" aria-label="노영훈 학생 포트폴리오 상세보기"
+                target="_blank">상세보기 <i class="fa-solid fa-arrow-right" aria-hidden="true"></i></a>
+            </div>
+          </article>
+
+          <!-- Project Card 9: Frontend -->
+          <article class="work-card" data-category="frontend" role="listitem">
+            <div class="card-img">
+              <img src="assets/frontend/sungman.png" alt="박성만 학생 포트폴리오 미리보기">
+            </div>
+            <div class="card-content">
+              <span class="card-category">프론트엔드</span>
+              <h3 class="card-title">2024' KDT프론트엔드 개발자 양성</h3>
+              <p class="card-author">- <b>박성만</b> 학생</p>
+              <p class="card-desc">React를 활용하여 만든 사이트로서 개인 작품을 소개하기 위한 홈페이지입니다.</p>
+              <a href="https://man323.myds.me/portfolio/" class="card-btn" aria-label="박성만 학생 포트폴리오 상세보기"
+                target="_blank">상세보기 <i class="fa-solid fa-arrow-right" aria-hidden="true"></i></a>
+            </div>
+          </article>
+
+          <!-- Project Card 10: Frontend -->
+          <article class="work-card" data-category="frontend" role="listitem">
+            <div class="card-img">
+              <img src="assets/frontend/jiwoo.png" alt="박지우 학생 포트폴리오 미리보기">
+            </div>
+            <div class="card-content">
+              <span class="card-category">프론트엔드</span>
+              <h3 class="card-title">2023' KDT웹퍼블리셔&프론트엔드</h3>
+              <p class="card-author">- <b>박지우</b> 학생</p>
+              <p class="card-desc">React를 활용하여 만든 사이트로서 개인 작품을 소개하기 위한 홈페이지입니다.</p>
+              <a href="https://parkjiwoo03.github.io/portfolio/" class="card-btn" aria-label="박지우 학생 포트폴리오 상세보기"
+                target="_blank">상세보기 <i class="fa-solid fa-arrow-right" aria-hidden="true"></i></a>
+            </div>
+          </article>
+
+          <!-- Project Card 11: Frontend -->
+          <article class="work-card" data-category="frontend" role="listitem">
+            <div class="card-img">
+              <img src="assets/frontend/kimjisu.png" alt="김지수 학생 포트폴리오 미리보기">
+            </div>
+            <div class="card-content">
+              <span class="card-category">프론트엔드</span>
+              <h3 class="card-title">2023' KDT웹퍼블리셔&프론트엔드</h3>
+              <p class="card-author">- <b>김지수</b> 학생</p>
+              <p class="card-desc">국순당 브랜드를 주제로 한 홈페이지입니다.</p>
+              <a href="https://jeon9897.github.io/2024_jisu_port/" class="card-btn" aria-label="김지수 학생 포트폴리오 상세보기"
+                target="_blank">상세보기 <i class="fa-solid fa-arrow-right" aria-hidden="true"></i></a>
+            </div>
+          </article>
+
+          <!-- Project Card 11: Frontend -->
+          <article class="work-card" data-category="frontend" role="listitem">
+            <div class="card-img">
+              <img src="assets/frontend/sungah.png" alt="이승아 학생 포트폴리오 미리보기">
+            </div>
+            <div class="card-content">
+              <span class="card-category">프론트엔드</span>
+              <h3 class="card-title">2022' KDT웹퍼블리셔&프론트엔드</h3>
+              <p class="card-author">- <b>이승아</b> 학생</p>
+              <p class="card-desc">개인 작품을 소개하기 위한 홈페이지입니다.</p>
+              <a href="https://xnclxud9.github.io/portfolio/" class="card-btn" aria-label="이승아 학생 포트폴리오 상세보기"
+                target="_blank">상세보기 <i class="fa-solid fa-arrow-right" aria-hidden="true"></i></a>
+            </div>
+          </article>
+
+          <!-- Project Card 12: Frontend -->
+          <article class="work-card" data-category="frontend" role="listitem">
+            <div class="card-img">
+              <img src="assets/frontend/jonghyun.png" alt="안종현 학생 포트폴리오 미리보기">
+            </div>
+            <div class="card-content">
+              <span class="card-category">프론트엔드</span>
+              <h3 class="card-title">2022' KDT웹퍼블리셔&프론트엔드</h3>
+              <p class="card-author">- <b>안종현</b> 학생</p>
+              <p class="card-desc">React를 활용하여 만든 사이트로서 개인 작품을 소개하기 위한 홈페이지입니다.</p>
+              <a href="https://academy2023.dothome.co.kr/portfolio/" class="card-btn" aria-label="안종현 학생 포트폴리오 상세보기"
+                target="_blank">상세보기 <i class="fa-solid fa-arrow-right" aria-hidden="true"></i></a>
+            </div>
+          </article>
+
+          <!-- Project Card 13: Frontend -->
+          <article class="work-card" data-category="frontend" role="listitem">
+            <div class="card-img">
+              <img src="assets/frontend/chanhyeok.png" alt="전찬혁 학생 포트폴리오 미리보기">
+            </div>
+            <div class="card-content">
+              <span class="card-category">프론트엔드</span>
+              <h3 class="card-title">2022' KDT웹퍼블리셔&프론트엔드</h3>
+              <p class="card-author">- <b>전찬혁</b> 학생</p>
+              <p class="card-desc">React를 활용하여 만든 사이트로서 개인 작품을 소개하기 위한 홈페이지입니다.</p>
+              <a href="https://imaginative-beijinho-528e76.netlify.app/" class="card-btn" aria-label="전찬혁 학생 포트폴리오 상세보기"
+                target="_blank">상세보기 <i class="fa-solid fa-arrow-right" aria-hidden="true"></i></a>
+            </div>
+          </article>
+
+          <!-- Project Card 1: Web Dev -->
+          <article class="work-card" data-category="web" role="listitem">
+            <div class="card-img">
+              <img src="assets/webpublishing/haewon.png" alt="웹퍼블리싱 포트폴리오 보기">
+            </div>
+            <div class="card-content">
+              <span class="card-category">웹퍼블리싱</span>
+              <h3 class="card-title">2022' 디지털 디자인 반응형웹</h3>
+              <p class="card-author">- <b>이혜원</b> 학생</p>
+              <p class="card-desc">웹표준과 웹 접근성을 준수한 포트폴리오용 웹사이트입니다.</p>
+              <a href="https://hyewon0418.github.io/p/" target="_blank" class="card-btn"
+                aria-label="이혜원 학생 포트폴리오 상세보기">상세보기 <i class="fa-solid fa-arrow-right" aria-hidden="true"></i></a>
+            </div>
+          </article>
+
+          <!-- Project Card 2: Web Dev -->
+          <article class="work-card" data-category="web" role="listitem">
+            <div class="card-img">
+              <img src="assets/webpublishing/jaehyo.png" alt="웹퍼블리싱 포트폴리오 보기">
+            </div>
+            <div class="card-content">
+              <span class="card-category">웹퍼블리싱</span>
+              <h3 class="card-title">2021' 과정형 평가 웹디자인</h3>
+              <p class="card-author">- <b>김재효</b> 학생</p>
+              <p class="card-desc">웹표준과 웹 접근성을 준수한 포트폴리오용 웹사이트입니다.</p>
+              <a href="https://tkdlxkakzns.github.io/portfolio/" target="_blank" class="card-btn"
+                aria-label="김재효 학생 포트폴리오 상세보기">상세보기 <i class="fa-solid fa-arrow-right" aria-hidden="true"></i></a>
+            </div>
+          </article>
+
+          <!-- Project Card 3: Web Dev -->
+          <article class="work-card" data-category="web" role="listitem">
+            <div class="card-img">
+              <img src="assets/webpublishing/jiwoo.png" alt="웹퍼블리싱 포트폴리오 보기">
+            </div>
+            <div class="card-content">
+              <span class="card-category">웹퍼블리싱</span>
+              <h3 class="card-title">2021' 과정형 평가 웹디자인</h3>
+              <p class="card-author">- <b>김지우</b> 학생</p>
+              <p class="card-desc">웹표준과 웹 접근성을 준수한 포트폴리오용 웹사이트입니다.</p>
+              <a href="https://jerry-jelly.github.io/portfolio/" target="_blank" class="card-btn"
+                aria-label="김지우 학생 포트폴리오 상세보기">상세보기 <i class="fa-solid fa-arrow-right" aria-hidden="true"></i></a>
+            </div>
+          </article>
+
+          <!-- Project Card 4: Web Dev -->
+          <article class="work-card" data-category="web" role="listitem">
+            <div class="card-img">
+              <img src="assets/webpublishing/junsuk.png" alt="웹퍼블리싱 포트폴리오 보기">
+            </div>
+            <div class="card-content">
+              <span class="card-category">웹퍼블리싱</span>
+              <h3 class="card-title">2021' 과정형 평가 웹디자인</h3>
+              <p class="card-author">- <b>이중석</b> 학생</p>
+              <p class="card-desc">웹표준과 웹 접근성을 준수한 포트폴리오용 웹사이트입니다.</p>
+              <a href="https://ljseok8.github.io/port/" target="_blank" class="card-btn"
+                aria-label="이중석 학생 포트폴리오 상세보기">상세보기 <i class="fa-solid fa-arrow-right" aria-hidden="true"></i></a>
+            </div>
+          </article>
+
+          <!-- Project Card 5: Web Dev -->
+          <article class="work-card" data-category="web" role="listitem">
+            <div class="card-img">
+              <img src="assets/webpublishing/hyeri.png" alt="웹퍼블리싱 포트폴리오 보기">
+            </div>
+            <div class="card-content">
+              <span class="card-category">웹퍼블리싱</span>
+              <h3 class="card-title">2021' 과정형 평가 웹디자인</h3>
+              <p class="card-author">- <b>라혜리</b> 학생</p>
+              <p class="card-desc">웹표준과 웹 접근성을 준수한 포트폴리오용 웹사이트입니다.</p>
+              <a href="https://rahyeri.github.io/portfolio" target="_blank" class="card-btn"
+                aria-label="라혜리 학생 포트폴리오 상세보기">상세보기 <i class="fa-solid fa-arrow-right" aria-hidden="true"></i></a>
+            </div>
+          </article>
+
+          <!-- Project Card 6: Web Dev -->
+          <article class="work-card" data-category="web" role="listitem">
+            <div class="card-img">
+              <img src="assets/webpublishing/sunmin.png" alt="웹퍼블리싱 포트폴리오 보기">
+            </div>
+            <div class="card-content">
+              <span class="card-category">웹퍼블리싱</span>
+              <h3 class="card-title">2021' 과정형 평가 웹디자인</h3>
+              <p class="card-author">- <b>현선민</b> 학생</p>
+              <p class="card-desc">웹표준과 웹 접근성을 준수한 포트폴리오용 웹사이트입니다.</p>
+              <a href="https://hyounsunmin.github.io/portfolio/main.html" target="_blank" class="card-btn"
+                aria-label="현선민 학생 포트폴리오 상세보기">상세보기 <i class="fa-solid fa-arrow-right" aria-hidden="true"></i></a>
+            </div>
+          </article>
+
+          <!-- Project Card 7: Web Dev -->
+          <article class="work-card" data-category="web" role="listitem">
+            <div class="card-img">
+              <img src="assets/webpublishing/gwiryeong.png" alt="웹퍼블리싱 포트폴리오 보기">
+            </div>
+            <div class="card-content">
+              <span class="card-category">웹퍼블리싱</span>
+              <h3 class="card-title">2021' 과정형 평가 웹디자인</h3>
+              <p class="card-author">- <b>이귀령</b> 학생</p>
+              <p class="card-desc">웹표준과 웹 접근성을 준수한 포트폴리오용 웹사이트입니다.</p>
+              <a href="https://rnlfud5616.github.io/portfolio/" target="_blank" class="card-btn"
+                aria-label="이귀령 학생 포트폴리오 상세보기">상세보기 <i class="fa-solid fa-arrow-right" aria-hidden="true"></i></a>
+            </div>
+          </article>
+
+          <!-- Project Card 3: uxui -->
+          <article class="work-card" data-category="uxui" role="listitem">
+            <div class="card-img">
+              <img src="assets/uxui/sujung03.png" alt="UI구성요소 스케치">
+            </div>
+            <div class="card-content">
+              <span class="card-category">UX/UI DESIGN</span>
+              <h3 class="card-title">2020' UIUX스마트웹_앱디자인(웹퍼블리셔_프론트엔드)실무</h3>
+              <p class="card-author">- <b>김수정</b> 학생</p>
+              <p class="card-desc">모바일 UI구성요소 스케치</p>
+              <a href="assets/uxui/sujung03_01.jpg" class="card-btn" aria-label="모바일 UI구성요소 스케치"
+                title="모바일 UI구성요소 스케치">상세보기 <i class="fa-solid fa-arrow-right" aria-hidden="true"></i></a>
+            </div>
+          </article>
+
+          <!-- Project Card 3: uxui -->
+          <article class="work-card" data-category="uxui" role="listitem">
+            <div class="card-img">
+              <img src="assets/uxui/hanul01.png" alt="결혼준비 예산관리 모바일 앱 미리보기">
+            </div>
+            <div class="card-content">
+              <span class="card-category">UX/UI DESIGN</span>
+              <h3 class="card-title">2019' 하이브리드 콘텐츠(웹,앱)</h3>
+              <p class="card-author">- <b>하늘</b> 학생</p>
+              <p class="card-desc">예비 신혼부부를 위한 결혼준비 예산관리 모바일 앱 UX/UI디자인입니다.</p>
+              <a href="assets/uxui/hanul01_02.jpg" class="card-btn" aria-label="결혼준비 예산관리 모바일 앱 상세보기"
+                title="결혼준비 예산관리 모바일 앱 상세보기">상세보기 <i class="fa-solid fa-arrow-right" aria-hidden="true"></i></a>
+            </div>
+          </article>
+
+          <!-- Project Card 3: uxui -->
+          <article class="work-card" data-category="uxui" role="listitem">
+            <div class="card-img">
+              <img src="assets/uxui/hanul02.jpg" alt="도서관리를 위한 모바일 앱 미리보기">
+            </div>
+            <div class="card-content">
+              <span class="card-category">UX/UI DESIGN</span>
+              <h3 class="card-title">2019' 하이브리드 콘텐츠(웹,앱)</h3>
+              <p class="card-author">- <b>팀작업 : 강지희, 서진한, 하늘</b> 학생</p>
+              <p class="card-desc">도서관리를 위한 모바일 앱 UX/UI디자인입니다.</p>
+              <a href="assets/uxui/hanul02_01.jpg" class="card-btn" aria-label="도서관리를 위한 모바일 앱 상세보기"
+                title="도서관리를 위한 모바일 앱 상세보기">상세보기 <i class="fa-solid fa-arrow-right" aria-hidden="true"></i></a>
+            </div>
+          </article>
+
+          <!-- Project Card 4: publishing -->
+          <article class="work-card" data-category="publishing" role="listitem">
+            <div class="card-img">
+              <img src="assets/graphic/banner_240923_minseun05.jpg" alt="새로형 배너 디자인">
+            </div>
+            <div class="card-content">
+              <span class="card-category">편집디자인(시각&출판편집)</span>
+              <h3 class="card-title">배너 디자인 - 감귤농장</h3>
+              <p class="card-author">- <b>민서운</b> 학생</p>
+              <p class="card-desc">감귤농장 홍보를 위한 세로형 배너 디자인입니다.<br><small>사용툴 : Adobe Photoshop, illustrator</small></p>
+              <a href="assets/graphic/banner_240923_minseun05_1.jpg" class="card-btn" aria-label="세로형 배너 디자인 상세보기">상세보기
+                <i class="fa-solid fa-arrow-right" aria-hidden="true"></i></a>
+            </div>
+          </article>
+
+          <!-- Project Card 4: publishing -->
+          <article class="work-card" data-category="publishing" role="listitem">
+            <div class="card-img">
+              <img src="assets/graphic/banner_240923_nayeon_03.png" alt="새로형 배너 디자인">
+            </div>
+            <div class="card-content">
+              <span class="card-category">편집디자인(시각&출판편집)</span>
+              <h3 class="card-title">배너 디자인 - 스터디 카페</h3>
+              <p class="card-author">- <b>김나연</b> 학생</p>
+              <p class="card-desc">스터디 카페 홍보를 위한 세로형 배너 디자인입니다.<br><small>사용툴 : Adobe Photoshop, illustrator</small></p>
+              <a href="assets/graphic/banner_240923_nayeon03_1.jpg" class="card-btn" aria-label="세로형 배너 디자인 상세보기">상세보기
+                <i class="fa-solid fa-arrow-right" aria-hidden="true"></i></a>
+            </div>
+          </article>
+
+          <!-- Project Card 4: publishing -->
+          <article class="work-card" data-category="publishing" role="listitem">
+            <div class="card-img">
+              <img src="assets/graphic/banner_240923_BAIZIXI04_04.png" alt="새로형 배너 디자인">
+            </div>
+            <div class="card-content">
+              <span class="card-category">편집디자인(시각&출판편집)</span>
+              <h3 class="card-title">배너 디자인 - 고양이 카페</h3>
+              <p class="card-author">- <b>백지시</b> 학생</p>
+              <p class="card-desc">고양이 카페 홍보를 위한 세로형 배너 디자인입니다.<br><small>사용툴 : Adobe Photoshop, illustrator</small></p>
+              <a href="assets/graphic/banner_240923_BAIZIXI_04_1.jpg" class="card-btn" aria-label="세로형 배너 디자인 상세보기">상세보기
+                <i class="fa-solid fa-arrow-right" aria-hidden="true"></i></a>
+            </div>
+          </article>
+
+          <!-- Project Card 4: publishing -->
+          <article class="work-card" data-category="publishing" role="listitem">
+            <div class="card-img">
+              <img src="assets/graphic/leaflet_01.png" alt="리플렛 디자인">
+            </div>
+            <div class="card-content">
+              <span class="card-category">편집디자인(시각&출판편집)</span>
+              <h3 class="card-title">리플렛 디자인 - 반려동물 의료비 지원</h3>
+              <p class="card-author">- <b>김지원</b> 학생</p>
+              <p class="card-desc">반려동물 의료비 지원 안내에 대한 3단 리플렛 디자인입니다.<br><small>사용툴 : Adobe Photoshop,
+                  illustrator</small></p>
+              <a href="assets/graphic/leaflet_01_1.jpg" class="card-btn" aria-label="리플렛 디자인 상세보기">상세보기 <i
+                  class="fa-solid fa-arrow-right" aria-hidden="true"></i></a>
+            </div>
+          </article>
+
+          <!-- Project Card 4: publishing -->
+          <article class="work-card" data-category="publishing" role="listitem">
+            <div class="card-img">
+              <img src="assets/graphic/leaflet_02.png" alt="리플렛 디자인">
+            </div>
+            <div class="card-content">
+              <span class="card-category">편집디자인(시각&출판편집)</span>
+              <h3 class="card-title">리플렛 디자인 - 도심속 아쿠아리움</h3>
+              <p class="card-author">- <b>이준민</b> 학생</p>
+              <p class="card-desc">도심속 아쿠아리움 관람 안내에 대한 3단 리플렛 디자인입니다.<br><small>사용툴 : Adobe Photoshop,
+                  illustrator</small></p>
+              <a href="assets/graphic/leaflet_02_1.jpg" class="card-btn" aria-label="리플렛 디자인 상세보기">상세보기 <i
+                  class="fa-solid fa-arrow-right" aria-hidden="true"></i></a>
+            </div>
+          </article>
+
+          <!-- Project Card 6: Web Dev -->
+          <article class="work-card" data-category="web" role="listitem">
+            <div class="card-img">
+              <img src="assets/webpublishing/yousujung.png" alt="개인 포트폴리오 미리보기">
+            </div>
+            <div class="card-content">
+              <span class="card-category">웹퍼블리싱</span>
+              <h3 class="card-title">2020' UIUX스마트웹_앱디자인 실무</h3>
+              <p class="card-author">- <b>유수정</b> 학생</p>
+              <p class="card-desc">웹표준과 웹 접근성을 준수한 포트폴리오용 웹사이트입니다.</p>
+              <a href="http://pfsjyou.dothome.co.kr/" class="card-btn" aria-label="유수정 포트폴리오 상세보기" target="_blank">상세보기
+                <i class="fa-solid fa-arrow-right" aria-hidden="true"></i>
+              </a>
+            </div>
+          </article>
+
+          <!-- Project Card 6: Web Dev -->
+          <article class="work-card" data-category="web" role="listitem">
+            <div class="card-img">
+              <img src="assets/webpublishing/seyeon.png" alt="개인포트폴리오 미리보기">
+            </div>
+            <div class="card-content">
+              <span class="card-category">웹퍼블리싱</span>
+              <h3 class="card-title">2019' 과정형 평가 웹디자인</h3>
+              <p class="card-author">- <b>김세연</b> 학생</p>
+              <p class="card-desc">웹표준과 웹 접근성을 준수한 포트폴리오용 웹사이트입니다.</p>
+              <a href="http://designking.dothome.co.kr/" class="card-btn" aria-label="김세연 포트폴리오 상세보기"
+                target="_blank">상세보기
+                <i class="fa-solid fa-arrow-right" aria-hidden="true"></i>
+              </a>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="about" aria-label="소개">
+      <div class="container">
+        <div class="about-grid">
+          <div class="about-content">
+            <h2>미래의 개발자를 위한<br>최적의 교육 플랫폼</h2>
+            <p>우리는 단순히 지식을 전달하는 것을 넘어, 프로젝트 중심의 실무 교육을 통해 스스로 문제를 해결할 수 있는 능력을 키워줍니다.</p>
+
+            <div class="about-features">
+              <div class="feature-item">
+                <div class="feature-icon"><i class="fa-solid fa-rocket" aria-hidden="true"></i></div>
+                <div class="feature-text">
+                  <h3>실무 중심 커리큘럼</h3>
+                  <p>현업 시니어 개발자들이 설계한 생생한 커리큘럼으로 학습합니다.</p>
+                </div>
+              </div>
+              <div class="feature-item">
+                <div class="feature-icon"><i class="fa-solid fa-users" aria-hidden="true"></i></div>
+                <div class="feature-text">
+                  <h3>1:1 멘토링 프로그램</h3>
+                  <p>코드 리뷰부터 커리어 상담까지 밀착 케어를 제공합니다.</p>
+                </div>
+              </div>
+              <div class="feature-item">
+                <div class="feature-icon"><i class="fa-solid fa-briefcase" aria-hidden="true"></i></div>
+                <div class="feature-text">
+                  <h3>압도적인 취업 성과</h3>
+                  <p>수료생 90% 이상이 IT 선도 기업으로 진출하고 있습니다.</p>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="about-stats">
+            <div class="stat-box">
+              <span class="stat-num">500+</span>
+              <span class="stat-label">누적 수료생</span>
+            </div>
+            <div class="stat-box">
+              <span class="stat-num">1.2k+</span>
+              <span class="stat-label">완성된 프로젝트</span>
+            </div>
+            <div class="stat-box">
+              <span class="stat-num">95%</span>
+              <span class="stat-label">수강 만족도</span>
+            </div>
+            <div class="stat-box">
+              <span class="stat-num">48h</span>
+              <span class="stat-label">평균 피드백 소요</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="contact">
+      <div class="container">
+        <div class="section-title">
+          <h2>Contact Us</h2>
+          <p>인재 채용 및 교육 문의는 언제든 환영합니다.</p>
+        </div>
+
+        <div class="contact-wrapper">
+          <div class="contact-info">
+            <h3>상담 안내</h3>
+            <div class="contact-details">
+              <div class="detail-item">
+                <i class="fa-solid fa-location-dot" aria-hidden="true"></i>
+                <p><span class="sr-only">주소: </span>서울특별시 종로구 수표로 96 국일관 2F, 5F</p>
+              </div>
+              <div class="detail-item">
+                <i class="fa-solid fa-phone" aria-hidden="true"></i>
+                <p><span class="sr-only">전화번호: </span>02-722-2111</p>
+              </div>
+              <div class="detail-item">
+                <i class="fa-solid fa-clock" aria-hidden="true"></i>
+                <p><span class="sr-only">평일 운영시간: </span>평일 AM 09:00 - PM 22:30</p>
+              </div>
+              <div class="detail-item">
+                <i class="fa-solid fa-clock" aria-hidden="true"></i>
+                <p><span class="sr-only">토요일 운영시간: </span>토요일 AM 09:00 - PM 16:30</p>
+              </div>
+              <div class="detail-item">
+                <i class="fa-solid fa-clock" aria-hidden="true"></i>
+                <p><span class="sr-only">휴무일: </span>일요일, 공휴일 휴무</p>
+              </div>
+            </div>
+          </div>
+          <form class="contact-form" aria-label="문의하기 양식">
+            <div class="form-group">
+              <label for="name">이름 / 기업명</label>
+              <input type="text" id="name" placeholder="성함 또는 기업명을 입력해주세요." required aria-required="true"
+                autocomplete="name">
+            </div>
+            <div class="form-group">
+              <label for="email">이메일 주소</label>
+              <input type="email" id="email" placeholder="example@domain.com" required aria-required="true"
+                autocomplete="email">
+            </div>
+            <div class="form-group">
+              <label for="message">문의 내용</label>
+              <textarea id="message" rows="5" placeholder="궁금하신 내용을 남겨주세요." required aria-required="true"></textarea>
+            </div>
+            <button type="submit" class="submit-btn">문의하기</button>
+          </form>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer role="contentinfo">
+    <div class="container">
+      <div class="footer-content">
+        <h2 class="footer-logo">Green Computer Art</h2>
+        <address>서울특별시 종로구 수표로 96 국일관 2F, 5F 그린컴퓨터아트학원</address>
+        <nav class="social-links" aria-label="소셜 미디어 링크">
+          <a href="#" aria-label="Instagram"><i class="fa-brands fa-instagram" aria-hidden="true"></i></a>
+          <a href="#" aria-label="Facebook"><i class="fa-brands fa-facebook" aria-hidden="true"></i></a>
+          <a href="#" aria-label="YouTube"><i class="fa-brands fa-youtube" aria-hidden="true"></i></a>
+          <a href="#" aria-label="GitHub"><i class="fa-brands fa-github" aria-hidden="true"></i></a>
+        </nav>
+      </div>
+      <div class="copyright">
+        <p>Copyrights&copy; 2021-2026 Green Computer Art Student Portfolio Showcase. All rights reserved.</p>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Top Button -->
+  <button id="topBtn" title="위로 이동" aria-label="맨 위로 이동">
+    <i class="fa-solid fa-arrow-up" aria-hidden="true"></i>
+  </button>
+
+  <!-- Image Modal -->
+  <div id="imageModal" class="modal" role="dialog" aria-modal="true" aria-label="이미지 크게 보기">
+    <span class="modal-close">&times;</span>
+    <img class="modal-content" id="modalImg" alt="확대된 이미지">
+  </div>
+
+  <!-- Scripts -->
+  <script src="./script/script.js"></script>
+</body>
+
+</html>
