@@ -443,8 +443,8 @@ header .container {
 }
 
 .card-title {
-  font-size: 1.3rem;
-  font-weight: 700;
+  font-size: 1.2rem;
+  font-weight: 600;
   margin-bottom: 10px;
 }
 
@@ -457,8 +457,19 @@ header .container {
 .card-desc {
   font-size: 1rem;
   color: var(--text-muted);
-  /* margin-bottom: 24px; */
+  margin-bottom: 60px;
+}
+
+.tool {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1px;
   margin-bottom: 50px;
+}
+
+.icon {
+  width: 36px;
+  height: 32px;
 }
 
 .card-btn {
