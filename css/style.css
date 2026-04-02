@@ -109,9 +109,13 @@ button {
 }
 
 .container {
-  max-width: 1200px;
+  max-width: 1218px;
   margin: 0 auto;
   padding: 0 24px;
+}
+
+.container-large {
+  max-width: 1418px;
 }
 
 section {
@@ -388,8 +392,26 @@ header .container {
 
 .works-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(min(100%, 350px), 1fr));
+  grid-template-columns: repeat(4, 1fr);
   gap: 30px;
+}
+
+@media (max-width: 1400px) {
+  .works-grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+@media (max-width: 1024px) {
+  .works-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 600px) {
+  .works-grid {
+    grid-template-columns: repeat(1, 1fr);
+  }
 }
 
 .work-card {
@@ -848,8 +870,8 @@ footer address {
 .modal-content {
   margin: auto;
   display: block;
-  max-width: 90%;
-  max-height: 80vh;
+  max-width: 94%;
+  max-height: 82vh;
   object-fit: contain;
   border: 10px solid #fff;
   /* border-radius: 8px; */
