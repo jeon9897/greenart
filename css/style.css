@@ -741,6 +741,10 @@ footer address {
     display: block;
   }
 
+  .filter-btn {
+    font-size: 0.9rem;
+  }
+
   .nav-links {
     position: fixed;
     top: 0;
