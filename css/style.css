@@ -743,6 +743,7 @@ footer address {
 
   .filter-btn {
     font-size: 0.9rem;
+    color: var(--text-color);
   }
 
   .nav-links {
