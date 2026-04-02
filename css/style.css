@@ -733,6 +733,10 @@ footer address {
 }
 
 @media (max-width: 768px) {
+  .container {
+    padding: 0px 14px;
+  }
+
   .mobile-toggle {
     display: block;
   }
