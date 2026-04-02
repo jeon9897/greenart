@@ -120,7 +120,7 @@ document.addEventListener('DOMContentLoaded', () => {
     const prefersReducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)');
     const sections = document.querySelectorAll('section');
     const observerOptions = {
-        threshold: 0.1
+        threshold: 0
     };
 
     const observer = new IntersectionObserver((entries) => {
