@@ -264,9 +264,9 @@ header .container {
   max-width: 800px;
 }
 
-.hero-content h1 {
+.hero-content h2 {
   font-size: var(--h1-size);
-  font-weight: 900;
+  font-weight: 800;
   line-height: 1.2;
   margin-bottom: 24px;
   color: var(--background-white);
@@ -763,8 +763,15 @@ footer address {
     grid-template-columns: 1fr;
   }
 
-  .hero-content h1 {
-    font-size: 2.5rem;
+  .hero-content h2 {
+    font-size: 2.3rem;
+    font-weight: 800;
+    color: var(--background-white)
+  }
+
+  .cta-btn {
+    padding: 12px 30px;
+    font-size: 1rem;
   }
 }
 

@@ -20,10 +20,7 @@
 *   **반응형 웹**: PC, 태블릿, 모바일 등 모든 기기에서 최적화된 레이아웃을 제공합니다.
 
 ## 📂 파일 구조
-*   [index.html](file:///e:/%EC%A0%84%EC%B0%BD%EC%9A%B0/01_AI%EC%88%98%EC%97%85%EC%9E%90%EB%A3%8C/%EA%B7%B8%EB%A6%B0%ED%8F%AC%ED%8A%B8%ED%8F%B4%EB%A6%AC%EC%98%A4/index.html): 웹사이트 구조 및 SEO 최적화 메타데이터
-*   [style.css](file:///e:/%EC%A0%84%EC%B0%BD%EC%9A%B0/01_AI%EC%88%98%EC%97%85%EC%9E%90%EB%A3%8C/%EA%B7%B8%EB%A6%B0%ED%8F%AC%ED%8A%B8%ED%8F%B4%EB%A6%AC%EC%98%A4/style.css): 디자인 시스템 및 반응형 스타일
-*   [script.js](file:///e:/%EC%A0%84%EC%B0%BD%EC%9A%B0/01_AI%EC%88%98%EC%97%85%EC%9E%90%EB%A3%8C/%EA%B7%B8%EB%A6%B0%ED%8F%AC%ED%8A%B8%ED%8F%B4%EB%A6%AC%EC%98%A4/script.js): 필터링 및 인터랙션 로직
+*   [index.html] : 웹사이트 구조 및 SEO 최적화 메타데이터
+*   [style.css] : 디자인 시스템 및 반응형 스타일
+*   [script.js]: 필터링 및 인터랙션 로직
 *   `assets/`: 생성된 이미지 에셋 파일들
-
-## ✅ 다음 단계
-현재 폴더의 [index.html](file:///e:/%EC%A0%84%EC%B0%BD%EC%9A%B0/01_AI%EC%88%98%EC%97%85%EC%9E%90%EB%A3%8C/%EA%B7%B8%EB%A6%B0%ED%8F%AC%ED%8A%B8%ED%8F%B4%EB%A6%AC%EC%98%A4/index.html) 파일을 브라우저로 열어 결과를 확인하실 수 있습니다. 추가적인 기능 구현이나 디자인 수정이 필요하시면 말씀해 주세요!
