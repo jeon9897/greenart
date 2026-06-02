@@ -19,37 +19,130 @@ document.addEventListener('DOMContentLoaded', () => {
         }
     });
 
-    // 3. Portfolio Filtering
+    // 3. Portfolio Filtering & Pagination
     const filterButtons = document.querySelectorAll('.filter-btn');
-    const workCards = document.querySelectorAll('.work-card');
+    const workCards = Array.from(document.querySelectorAll('.work-card'));
+    const paginationContainer = document.getElementById('pagination');
+    
+    let currentFilter = 'all';
+    let currentPage = 1;
+    const itemsPerPage = 12;
+
+    function updatePortfolio() {
+        // 1. Filter items
+        const filteredCards = workCards.filter(card => {
+            return currentFilter === 'all' || card.getAttribute('data-category') === currentFilter;
+        });
+
+        // 2. Calculate pagination
+        const totalItems = filteredCards.length;
+        const totalPages = Math.ceil(totalItems / itemsPerPage);
+        
+        // Ensure currentPage is within bounds
+        if (currentPage > totalPages && totalPages > 0) currentPage = totalPages;
+        if (currentPage < 1) currentPage = 1;
+
+        // 3. Show/Hide cards
+        workCards.forEach(card => {
+            card.style.display = 'none';
+            card.style.opacity = '0';
+            card.style.transform = 'scale(0.95)';
+        });
+
+        const start = (currentPage - 1) * itemsPerPage;
+        const end = start + itemsPerPage;
+        const currentItems = filteredCards.slice(start, end);
+
+        currentItems.forEach((card, index) => {
+            card.style.display = 'flex';
+            // Slight delay for each card animation
+            setTimeout(() => {
+                card.style.opacity = '1';
+                card.style.transform = 'scale(1)';
+            }, index * 50);
+        });
+
+        // 4. Render Pagination Controls
+        renderPagination(totalPages);
+    }
+
+    function renderPagination(totalPages) {
+        if (!paginationContainer) return;
+        paginationContainer.innerHTML = '';
+
+        if (totalPages <= 1) return;
+
+        const nav = document.createElement('nav');
+        nav.className = 'pagination';
+        nav.setAttribute('aria-label', '페이지 선택');
+
+        // Prev Button
+        const prevBtn = document.createElement('button');
+        prevBtn.className = 'page-btn';
+        prevBtn.innerHTML = '<i class="fa-solid fa-chevron-left"></i>';
+        prevBtn.disabled = currentPage === 1;
+        prevBtn.addEventListener('click', () => {
+            currentPage--;
+            updatePortfolio();
+            scrollToWorks();
+        });
+        nav.appendChild(prevBtn);
+
+        // Page Numbers
+        for (let i = 1; i <= totalPages; i++) {
+            const pageBtn = document.createElement('button');
+            pageBtn.className = `page-btn ${i === currentPage ? 'active' : ''}`;
+            pageBtn.textContent = i;
+            pageBtn.addEventListener('click', () => {
+                currentPage = i;
+                updatePortfolio();
+                scrollToWorks();
+            });
+            nav.appendChild(pageBtn);
+        }
+
+        // Next Button
+        const nextBtn = document.createElement('button');
+        nextBtn.className = 'page-btn';
+        nextBtn.innerHTML = '<i class="fa-solid fa-chevron-right"></i>';
+        nextBtn.disabled = currentPage === totalPages;
+        nextBtn.addEventListener('click', () => {
+            currentPage++;
+            updatePortfolio();
+            scrollToWorks();
+        });
+        nav.appendChild(nextBtn);
+
+        paginationContainer.appendChild(nav);
+    }
+
+    function scrollToWorks() {
+        const worksSection = document.getElementById('works');
+        if (worksSection) {
+            window.scrollTo({
+                top: worksSection.offsetTop - 70,
+                behavior: 'smooth'
+            });
+        }
+    }
 
     filterButtons.forEach(button => {
         button.addEventListener('click', () => {
-            // Remove active class and update aria-pressed for all buttons
             filterButtons.forEach(btn => {
                 btn.classList.remove('active');
                 btn.setAttribute('aria-pressed', 'false');
             });
-            // Add active class and aria-pressed to clicked button
             button.classList.add('active');
             button.setAttribute('aria-pressed', 'true');
 
-            const filterValue = button.getAttribute('data-filter');
-
-            workCards.forEach(card => {
-                if (filterValue === 'all' || card.getAttribute('data-category') === filterValue) {
-                    card.style.display = 'flex';
-                    // Animation effect
-                    card.style.opacity = '1';
-                    card.style.transform = 'scale(1)';
-                } else {
-                    card.style.display = 'none';
-                    card.style.opacity = '0';
-                    card.style.transform = 'scale(0.95)';
-                }
-            });
+            currentFilter = button.getAttribute('data-filter');
+            currentPage = 1; // Reset to page 1 on filter change
+            updatePortfolio();
         });
     });
+
+    // Initialize
+    updatePortfolio();
 
     // 3.1 Mobile Menu Toggle
     const mobileToggle = document.querySelector('.mobile-toggle');
