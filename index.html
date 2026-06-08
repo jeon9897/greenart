@@ -1806,7 +1806,7 @@
       submitBtn.disabled = true;
 
       // 🌟 Google 웹 앱 URL
-      const gasURL = 'https://script.google.com/macros/s/AKfycbzUh8cdv6hL6hPtMe8oLH9jZdtnueEGz_kVHE0BA7sFgBsiWAOEL2XHQCKJ9__rfa9xTQ/exec';
+      const gasURL = 'https://script.google.com/macros/s/AKfycbyIhvDldMTzi8etm-LOIvEMMu7U2ZOWrXn8Biak46XJAdySY-_TmikAy6FlnzvXwXBRGw/exec';
 
       // 폼 데이터를 URL 인코딩 형태로 변환
       const formData = new URLSearchParams(new FormData(this));
@@ -1832,7 +1832,7 @@
           alert('전송에 실패했습니다.');
         })
         .finally(() => {
-          submitBtn.innerText = '문의글 전송';
+          submitBtn.innerText = '상담문의하기';
           submitBtn.disabled = false;
         });
     });
