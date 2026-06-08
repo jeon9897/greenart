@@ -1743,7 +1743,8 @@
               </div>
             </div>
           </div>
-          <form action="https://formspree.io/f/{mastercom}" method="POST" class="contact-form" aria-label="문의하기 양식">
+
+          <form action="" method="POST" id="contactForm" class="contact-form" aria-label="문의하기 양식">
             <div class="form-group">
               <label for="name">이름 / 기업명</label>
               <input type="text" id="name" placeholder="성함 또는 기업명을 입력해주세요." required aria-required="true"
@@ -1758,8 +1759,9 @@
               <label for="message">문의 내용</label>
               <textarea id="message" rows="5" placeholder="궁금하신 내용을 남겨주세요." required aria-required="true"></textarea>
             </div>
-            <button type="submit" class="submit-btn">문의하기</button>
+            <button type="submit" class="submit-btn" id="submitBtn">문의하기</button>
           </form>
+
         </div>
       </div>
     </section>
@@ -1793,6 +1795,47 @@
     <span class="modal-close">&times;</span>
     <img class="modal-content" id="modalImg" alt="확대된 이미지">
   </div>
+
+  <script>
+    document.getElementById('contactForm').addEventListener('submit', function (e) {
+      e.preventDefault(); // 기본 폼 제출(새로고침) 막기
+
+      const submitBtn = document.getElementById('submitBtn');
+      submitBtn.innerText = '전송 중...';
+      submitBtn.disabled = true;
+
+      // 🌟 [1단계]에서 복사한 Google 웹 앱 URL을 여기에 붙여넣으세요.
+      const gasURL = 'https://script.google.com/macros/s/AKfycby2-k23kQSUptkVGfA0Z1u9KnCU9P61LxmdJkxVfnrceZtdCKq-ElgKIEEHKd8tXg8pgw/exec';
+
+      // 폼 데이터를 URL 인코딩 형태로 변환
+      const formData = new URLSearchParams(new FormData(this));
+
+      fetch(gasURL, {
+        method: 'POST',
+        body: formData,
+        headers: {
+          'Content-Type': 'application/x-www-form-urlencoded'
+        }
+      })
+        .then(response => response.json())
+        .then(data => {
+          if (data.result === 'success') {
+            alert('문의가 성공적으로 전송되었습니다!');
+            document.getElementById('contactForm').reset(); // 폼 초기화
+          } else {
+            alert('오류가 발생했습니다. 다시 시도해 주세요.');
+          }
+        })
+        .catch(error => {
+          console.error('Error:', error);
+          alert('전송에 실패했습니다.');
+        })
+        .finally(() => {
+          submitBtn.innerText = '문의글 전송';
+          submitBtn.disabled = false;
+        });
+    });
+  </script>
 
   <!-- Scripts -->
   <script src="./script/script.js"></script>
