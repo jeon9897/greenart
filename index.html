@@ -1748,16 +1748,17 @@
             <div class="form-group">
               <label for="name">이름 / 기업명</label>
               <input type="text" id="name" placeholder="성함 또는 기업명을 입력해주세요." required aria-required="true"
-                autocomplete="name">
+                autocomplete="name" name="작성자">
             </div>
             <div class="form-group">
               <label for="email">이메일 주소</label>
               <input type="email" id="email" placeholder="example@domain.com" required aria-required="true"
-                autocomplete="email">
+                autocomplete="email" name="이메일">
             </div>
             <div class="form-group">
               <label for="message">문의 내용</label>
-              <textarea id="message" rows="5" placeholder="궁금하신 내용을 남겨주세요." required aria-required="true"></textarea>
+              <textarea id="message" name="문의내용" rows="5" placeholder="궁금하신 내용을 남겨주세요." required
+                aria-required="true"></textarea>
             </div>
             <button type="submit" class="submit-btn" id="submitBtn">문의하기</button>
           </form>
@@ -1804,8 +1805,8 @@
       submitBtn.innerText = '전송 중...';
       submitBtn.disabled = true;
 
-      // 🌟 [1단계]에서 복사한 Google 웹 앱 URL을 여기에 붙여넣으세요.
-      const gasURL = 'https://script.google.com/macros/s/AKfycby2-k23kQSUptkVGfA0Z1u9KnCU9P61LxmdJkxVfnrceZtdCKq-ElgKIEEHKd8tXg8pgw/exec';
+      // 🌟 Google 웹 앱 URL
+      const gasURL = 'https://script.google.com/macros/s/AKfycbzUh8cdv6hL6hPtMe8oLH9jZdtnueEGz_kVHE0BA7sFgBsiWAOEL2XHQCKJ9__rfa9xTQ/exec';
 
       // 폼 데이터를 URL 인코딩 형태로 변환
       const formData = new URLSearchParams(new FormData(this));

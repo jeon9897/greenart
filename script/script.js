@@ -23,7 +23,7 @@ document.addEventListener('DOMContentLoaded', () => {
     const filterButtons = document.querySelectorAll('.filter-btn');
     const workCards = Array.from(document.querySelectorAll('.work-card'));
     const paginationContainer = document.getElementById('pagination');
-    
+
     let currentFilter = 'all';
     let currentPage = 1;
     const itemsPerPage = 12;
@@ -37,7 +37,7 @@ document.addEventListener('DOMContentLoaded', () => {
         // 2. Calculate pagination
         const totalItems = filteredCards.length;
         const totalPages = Math.ceil(totalItems / itemsPerPage);
-        
+
         // Ensure currentPage is within bounds
         if (currentPage > totalPages && totalPages > 0) currentPage = totalPages;
         if (currentPage < 1) currentPage = 1;
@@ -195,19 +195,19 @@ document.addEventListener('DOMContentLoaded', () => {
     });
 
     // 5. Simple Form Handling
-    const contactForm = document.querySelector('.contact-form');
-    if (contactForm) {
-        contactForm.addEventListener('submit', (e) => {
-            e.preventDefault();
-            const name = document.getElementById('name').value;
-            if (name) {
-                alert(`감사합니다, ${name}님! 문의 내용이 정상적으로 접수되었습니다. 곧 연락드리겠습니다.`);
-                contactForm.reset();
-            } else {
-                alert('이름과 내용을 모두 입력해주세요.');
-            }
-        });
-    }
+    // const contactForm = document.querySelector('.contact-form');
+    // if (contactForm) {
+    //     contactForm.addEventListener('submit', (e) => {
+    //         e.preventDefault();
+    //         const name = document.getElementById('name').value;
+    //         if (name) {
+    //             alert(`감사합니다, ${name}님! 문의 내용이 정상적으로 접수되었습니다. 곧 연락드리겠습니다.`);
+    //             contactForm.reset();
+    //         } else {
+    //             alert('이름과 내용을 모두 입력해주세요.');
+    //         }
+    //     });
+    // }
 
     // 6. Simple reveal animation on scroll (respects prefers-reduced-motion)
     const prefersReducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)');
