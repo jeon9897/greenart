@@ -1199,7 +1199,7 @@
               <h3 class="card-title">22' KDT웹퍼블리셔&프론트엔드</h3>
               <p class="card-author">- <b>이승아</b> 학생</p>
               <p class="card-desc">프라이탁 적응형 웹 디자인</p>
-              <a href="assets/uxui/leesungah.jpg" class="card-btn" aria-label="프라이탁 적응형 웹 디자인"
+              <a href="assets/uxui/leesungah01.jpg" class="card-btn" aria-label="프라이탁 적응형 웹 디자인"
                 title="프라이탁 적응형 웹 디자인">상세보기
                 <i class="fa-solid fa-arrow-right" aria-hidden="true"></i></a>
             </div>
@@ -1796,47 +1796,6 @@
     <span class="modal-close">&times;</span>
     <img class="modal-content" id="modalImg" alt="확대된 이미지">
   </div>
-
-  <script>
-    document.getElementById('contactForm').addEventListener('submit', function (e) {
-      e.preventDefault(); // 기본 폼 제출(새로고침) 막기
-
-      const submitBtn = document.getElementById('submitBtn');
-      submitBtn.innerText = '전송 중...';
-      submitBtn.disabled = true;
-
-      // 🌟 Google 웹 앱 URL
-      const gasURL = 'https://script.google.com/macros/s/AKfycbzBXSe6bh3o0J6taoABOU7qvVSuBDPr3V_DcWMqfufN0uMj1kh8gYtZk2LaeyHVFvZhFA/exec';
-
-      // 폼 데이터를 URL 인코딩 형태로 변환
-      const formData = new URLSearchParams(new FormData(this));
-
-      fetch(gasURL, {
-        method: 'POST',
-        body: formData,
-        headers: {
-          'Content-Type': 'application/x-www-form-urlencoded'
-        }
-      })
-        .then(response => response.json())
-        .then(data => {
-          if (data.result === 'success') {
-            alert('작성하신 상담문의 글이 성공적으로 전송되었습니다!\n담당자가 확인 후 연락드리겠습니다.');
-            document.getElementById('contactForm').reset(); // 폼 초기화
-          } else {
-            alert('오류가 발생했습니다. 다시 시도해 주세요.');
-          }
-        })
-        .catch(error => {
-          console.error('Error:', error);
-          alert('전송에 실패했습니다.');
-        })
-        .finally(() => {
-          submitBtn.innerText = '상담문의하기';
-          submitBtn.disabled = false;
-        });
-    });
-  </script>
 
   <!-- Scripts -->
   <script src="./script/script.js"></script>
